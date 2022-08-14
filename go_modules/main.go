@@ -2,10 +2,26 @@ package main
 
 import (
 	"fmt"
-	"studyGo/go_modules/requesthtml"
+	"sync"
 )
 
 func main() {
-	html := requesthtml.RequestHtml("https://www.iqiyi.com/")
-	fmt.Println(html)
+	//h := requesthtml.RequestHtml("www.baidu.com")
+	//fmt.Println(h)
+	var wg sync.WaitGroup
+	wg.Add(2)
+
+	go func() {
+		defer wg.Done()
+		for i := 0; i <= 100; i++ {
+			fmt.Println("+", i)
+		}
+	}()
+	go func() {
+		defer wg.Done()
+		for i := 0; i <= 100; i++ {
+			fmt.Println("-", i)
+		}
+	}()
+	wg.Wait()
 }

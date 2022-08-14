@@ -1,4 +1,4 @@
-package requesthtml
+package dbSql
 
 import (
 	"database/sql"
