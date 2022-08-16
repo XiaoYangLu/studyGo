@@ -16,7 +16,7 @@ func StudyChannel() {
 
 	ch := make(chan string, 5) //缓冲通道
 	//Wg.Add(2)  //此处使用 Wg 如下:
-	//fatal error: all goroutines are asleep - deadlock!
+	//fatal error: all  are asleep - deadlock!
 	//因为main在等goroutine，而此时所有的goroutine已经结束
 	//可研究35行的select中的case
 	go testChannel(ch)
