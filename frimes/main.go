@@ -5,6 +5,5 @@ import (
 )
 
 func main() {
-	gorm.DbMysqlPrivate()
-
+	gorm.DbMysql()
 }

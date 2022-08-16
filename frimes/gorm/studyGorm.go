@@ -10,9 +10,9 @@ import (
 /*
  * 简单的连接mysq
  */
-func DbMysqlPrivate() {
+func DbMysql() {
 	//连接数据库
-	//db, err := gorm.Open(config.DBOBJ, config.USER+"@("+config.DBIP+")/"+"?charset=utf8mb4&parseTime=True&loc=Local")
+	//db, err := gorm.Open("连接的数据库","用户:密码@(IP+port)/数据库名?charset=utf8mb4&parseTime=True&loc=Local")
 	db, err := gorm.Open("mysql", "root:117503@(127.0.0.1:3306)/gu?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		fmt.Println("连接数据库错误：", err)
@@ -36,7 +36,7 @@ func DbMysqlPrivate() {
 	db.First(&u)
 	fmt.Println(u)
 	//修改数据
-	db.Model(&u).Update("Name", "李四")
+	db.Model(&u).Update("Name", "王五")
 	db.First(&u)
 	fmt.Println(&u)
 
