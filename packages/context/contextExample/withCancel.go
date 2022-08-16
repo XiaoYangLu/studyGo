@@ -1,4 +1,4 @@
-package coutext
+package contextExample
 
 import (
 	"context"
@@ -6,11 +6,11 @@ import (
 )
 
 func StudyWithCancel() {
-	// gen generates integers in a separate goroutine and
-	// sends them to the returned channel.
-	// The callers of gen need to cancel the context once
-	// they are done consuming generated integers not to leak
-	// the internal goroutine started by gen.
+	//gen在一个单独的gor例程中生成整数
+	//发送它们到返回的通道。
+	//gen的调用者需要取消上下文一次
+	//它们使用生成的整数不泄漏
+	//由gen. exe启动的内部goroutine。
 	gen := func(ctx context.Context) <-chan int {
 		dst := make(chan int)
 		n := 1
