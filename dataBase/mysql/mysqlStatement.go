@@ -27,7 +27,7 @@ func StudyMysqlStatement() {
 	//创建数据库					 		创建表
 	//CREATE DTATBASE 数据库名;			CREATE TABLEE 表名(
 	//查看所有数据库							字段  属性,
-	//SHOW DATABASE;						...
+	//SHOW DATABASES;						...
 	//									);
 	//查看已经创建的数据库				查看表
 	//SHOW CREATE DATABASE;				SHOW CREATE TABLE 表名 [\G];  #\G格式化查看
