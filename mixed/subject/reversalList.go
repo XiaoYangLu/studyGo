@@ -4,6 +4,7 @@ type ListNode struct {
 	Val  string
 	Next *ListNode
 }
+解决问题
 
 // 反转链表
 func reverseList(head *ListNode) *ListNode {
